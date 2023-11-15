@@ -1,36 +1,22 @@
-//const handLeRes = async () => {
-   // try {
-      //  const res = await fetch()
-      //  const data = await res.json()
-      //  console.log(data,'data')
-   // } catch (err) {
-    //    console.log(err,'error')
-   // } finally {
-      //  form.innerText = 'Finished'
-    //}
-//}
 
-function validateForm() {
-    var username = document.getElementById('username').value;
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    var confirmPassword = document.getElementById('confirmPassword').value;
+const form =document.querySelector(`.form`)
+const last =document.querySelector(`#last`);
+const first =document.querySelector(`#first`);
+const user=document.querySelector(`#user`);
+const email =document.querySelector(`#email`);
+const password =document.querySelector(`#password`);
+const confirmPassword =document.querySelector(`#confirmPassword`);
 
-    if (
-        username.length >= 3 &&
-        firstName.length >= 3 &&
-        lastName.length >= 3 &&
-        email.length > 0 &&
-        password.length >= 3 && password.length <= 8 &&
-        confirmPassword.length >= 3 && confirmPassword.length <= 8 &&
-        password === confirmPassword
-    ) {
-        alert("Form submitted successfully!\n\nUser Name: " + username + "\nFirst Name: " + firstName + "\nLast Name: " + lastName + "\nEmail: " + email);
-    } else {
-        alert("Please check the form for errors.");
+
+form.addEventListener("submit",() =>{
+    if(last.value===''||first.value===''){
+        alert('Заполните все поля')
+    }else if(last.value.length<=3||first.value.length<=3||user.value.length<=3){
+        alert('dlina bolshe 3')
+    }else if(password.value!==confirmPassword.value){
+        alert('vvedite pravilno')
+    }else {
+        alert(`user,vse verno`)
     }
-}
-
+})
 

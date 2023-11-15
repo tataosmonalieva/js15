@@ -3,31 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
-    margin-top: 50px;
+.form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    text-align: center;
+    gap: 20px;
+    margin: 20px;
 }
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+input{
+    padding: 10px 25px;
     border-radius: 20px;
-    margin: 15px;
+    background-color: lightgray;
+    color: black;
+    border-color: red;
 
 }
-input {
-    padding: 15px;
-    border-radius: 20px;
-    margin: 10px;
-    border-color: red;
+button{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: deepskyblue;
+    color: white;
 }
-button {
-    padding: 15px;
-    border-radius: 15px;
-    background-color: cornflowerblue;
+body{
+    background-color: white;
+}
